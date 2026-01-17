@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECZ113 Tıbbi Biyoloji ve Genetik - Final Sonuçları</title>
     <style>
-        /* SİZİN ÖZEL TASARIM KODLARINIZ */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -219,14 +218,42 @@
         <div class="evaluation-section">
             <h2>📋 Genel Sınav Değerlendirmesi</h2>
             <div class="evaluation-content">
+                
                 <div class="success-box" style="background: #d4edda; border-left: 4px solid #28a745; padding: 15px 20px; border-radius: 5px;">
-                    <strong>🎉 Tebrikler!</strong> Sınıfımızın %92.2'si başarıyla dersi geçti.
+                    <strong>🎉 Tebrikler!</strong> Sınıfımızın %92.2'si başarıyla dersi geçti. Bu, eczacılık gibi zorlu bir programda oldukça güçlü bir performans göstergesidir.
                 </div>
+
                 <h3>📊 Performans Analizi</h3>
-                <p>Güz dönemi sınav sonuçlarımız genel olarak <strong>başarılı</strong> bir tablo ortaya koyuyor...</p>
+                <p>
+                    Güz dönemi sınav sonuçlarımız genel olarak <strong>başarılı</strong> bir tablo ortaya koyuyor. 
+                    Vize ortalamanız (89.3) final ortalamanızdan (69.5) belirgin şekilde yüksek, bu da dönem başında 
+                    konuları iyi kavradığınızı ancak final döneminde daha yoğun ve kapsamlı müfredat nedeniyle 
+                    zorlandığınızı gösteriyor.
+                </p>
+
+                <h3>✅ Güçlü Yönlerimiz</h3>
+                <ul>
+                    <li><strong>Yüksek Geçme Oranı:</strong> %92.2'lik başarı oranı, çoğunuzun temel tıbbi biyoloji ve genetik kavramlarını anladığını gösteriyor.</li>
+                    <li><strong>Güçlü Üst Segment:</strong> 67 öğrenci (%65) 80 ve üzeri puan aldı. Bu kaliteli bir performans.</li>
+                    <li><strong>Vize Başarısı:</strong> 89.3'lük vize ortalaması dönem başında konulara hakim olduğunuzu kanıtlıyor.</li>
+                </ul>
+
+                <h3>💡 Gelişim Alanları</h3>
+                <ul>
+                    <li><strong>Final Hazırlığı:</strong> Vize-Final arasındaki 20 puanlık fark, final döneminde daha sistematik çalışma stratejilerine ihtiyaç olduğunu gösteriyor.</li>
+                    <li><strong>Klinik Entegrasyon:</strong> Tıbbi biyoloji ve genetik kavramlarını ilaç mekanizmalarıyla bağdaştırmada daha fazla pratik yapmalıyız.</li>
+                </ul>
+
                 <div class="highlight-box">
-                    <strong>📚 Bütünleme Sınavı Hakkında:</strong> 8 arkadaşımız maalesef geçme notunun altında kaldı...
+                    <strong>📚 Bütünleme Sınavı Hakkında:</strong> 8 arkadaşımız maalesef geçme notunun altında kaldı. 
+                    Bütünleme sınavı şansınız var ve bu bir son değil, yeni bir başlangıç! Tıbbi biyoloji ve genetik zorlu bir alan 
+                    ama doğru stratejiyle kesinlikle başarılabilir. Yaz dönemini verimli kullanarak temel konuları tekrar edin.
                 </div>
+
+                <p style="margin-top: 25px; font-weight: bold; color: #C1272D;">
+                    Sizlerle gurur duyuyorum! Eczacılık kariyerinizin temelini oluşturan bu derste gösterdiğiniz 
+                    başarı, gelecekte harika eczacılar olacağınızın göstergesi. 💪
+                </p>
             </div>
         </div>
 
@@ -236,9 +263,7 @@
                 <p>ISTUN e-posta adresinizi girin, sonuçlarınız e-postanıza gönderilsin:</p>
                 
                 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdVEyP0jGiD4MQ1630u3-tdQBlpI5URX2LBanwtPmyIu1Ia8w/formResponse" method="POST" target="hidden_iframe" onsubmit="showMessage()">
-                    
                     <input type="email" name="entry.1766891647" placeholder="ornek@istun.edu.tr" required pattern=".*@istun\.edu\.tr$" title="Lütfen geçerli bir ISTUN e-posta adresi girin">
-                    
                     <button type="submit">Sonuçlarımı E-postama Gönder</button>
                 </form>
                 
@@ -254,15 +279,16 @@
             <p><strong>Assist. Prof. Dr. Ersin Gündeğer</strong></p>
             <p>İstanbul Sağlık ve Teknoloji Üniversitesi</p>
             <p>Eczacılık Fakültesi</p>
+            <p style="margin-top: 15px;">Sorularınız için: ersin.gundeger@istun.edu.tr</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">© 2025-2026 Güz Dönemi</p>
         </footer>
     </div>
 
     <script>
         function showMessage() {
-            // Butona basıldıktan sonra mesajı göster
             setTimeout(function() {
                 document.getElementById('successMessage').style.display = 'block';
-                // Formu temizle
+                // İsteğe bağlı: Formu temizlemek için aşağıdaki satırı kullanabilirsiniz
                 document.querySelector('form').reset();
             }, 1000);
         }
