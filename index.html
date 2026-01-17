@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECZ113 Tıbbi Biyoloji ve Genetik - Final Sonuçları</title>
+    <style>
+        /* SİZİN ÖZEL TASARIM KODLARINIZ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #C1272D 0%, #8B1F23 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        header h1 { font-size: 2.2em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-left: 5px solid #C1272D;
+        }
+        
+        .stat-card:hover { transform: translateY(-5px); }
+        .stat-card h3 { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        .stat-card .value { font-size: 2.5em; font-weight: bold; color: #C1272D; }
+        
+        .success-rate {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 40px;
+        }
+        
+        .success-rate .percentage { font-size: 3em; font-weight: bold; }
+        
+        .evaluation-section {
+            padding: 40px;
+            background: white;
+        }
+        
+        .evaluation-section h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #C1272D;
+            padding-bottom: 10px;
+        }
+        
+        .evaluation-content { line-height: 1.8; color: #555; }
+        .evaluation-content h3 { color: #C1272D; margin-top: 25px; margin-bottom: 15px; }
+        .evaluation-content ul { margin-left: 25px; margin-bottom: 15px; }
+        .evaluation-content li { margin-bottom: 10px; }
+        
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .form-section {
+            padding: 40px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        }
+        
+        .form-section h2 {
+            color: #1565C0;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-box p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        
+        .form-box input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-box input:focus {
+            outline: none;
+            border-color: #1565C0;
+            box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+        }
+        
+        .form-box button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            background: linear-gradient(135deg, #C1272D 0%, #8B1F23 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .form-box button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(193, 39, 45, 0.3);
+        }
+        
+        .info-message {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px 20px;
+            margin: 20px 40px;
+            border-radius: 5px;
+            color: #0c5460;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        footer p { margin: 5px 0; opacity: 0.9; }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.5em; }
+            .stats-container { grid-template-columns: 1fr; padding: 20px; }
+            .evaluation-section, .form-section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 ECZ113 Tıbbi Biyoloji ve Genetik</h1>
+            <p>2025-2026 Güz Dönemi Final Sınav Sonuçları</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.8;">İstanbul Sağlık ve Teknoloji Üniversitesi - Eczacılık Fakültesi</p>
+        </header>
+
+        <div class="info-message">
+            <strong>ℹ️ Bilgilendirme:</strong> Kişisel sınav sonuçlarınızı görmek için aşağıdaki forma ISTUN e-posta adresinizi girin. Sonuçlarınız e-postanıza gönderilecektir.
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Toplam Öğrenci</h3>
+                <div class="value">103</div>
+                <div class="label">Kayıtlı</div>
+            </div>
+            <div class="stat-card">
+                <h3>Genel Ortalama</h3>
+                <div class="value">78.5</div>
+                <div class="label">Vize %40 + Final %60</div>
+            </div>
+            <div class="stat-card">
+                <h3>Vize Ortalaması</h3>
+                <div class="value">89.3</div>
+                <div class="label">100 üzerinden</div>
+            </div>
+            <div class="stat-card">
+                <h3>Final Ortalaması</h3>
+                <div class="value">69.5</div>
+                <div class="label">100 üzerinden</div>
+            </div>
+        </div>
+
+        <div class="success-rate">
+            <h3>Başarı Oranı</h3>
+            <div class="percentage">%92.2</div>
+            <p>95 öğrenci başarıyla geçti ✓</p>
+        </div>
+
+        <div class="evaluation-section">
+            <h2>📋 Genel Sınav Değerlendirmesi</h2>
+            <div class="evaluation-content">
+                <div class="success-box" style="background: #d4edda; border-left: 4px solid #28a745; padding: 15px 20px; border-radius: 5px;">
+                    <strong>🎉 Tebrikler!</strong> Sınıfımızın %92.2'si başarıyla dersi geçti.
+                </div>
+                <h3>📊 Performans Analizi</h3>
+                <p>Güz dönemi sınav sonuçlarımız genel olarak <strong>başarılı</strong> bir tablo ortaya koyuyor...</p>
+                <div class="highlight-box">
+                    <strong>📚 Bütünleme Sınavı Hakkında:</strong> 8 arkadaşımız maalesef geçme notunun altında kaldı...
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>📧 Kişisel Sonuçlarınızı Alın</h2>
+            <div class="form-box">
+                <p>ISTUN e-posta adresinizi girin, sonuçlarınız e-postanıza gönderilsin:</p>
+                
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSdVEyP0jGiD4MQ1630u3-tdQBlpI5URX2LBanwtPmyIu1Ia8w/formResponse" method="POST" target="hidden_iframe" onsubmit="showMessage()">
+                    
+                    <input type="email" name="entry.1766891647" placeholder="ornek@istun.edu.tr" required pattern=".*@istun\.edu\.tr$" title="Lütfen geçerli bir ISTUN e-posta adresi girin">
+                    
+                    <button type="submit">Sonuçlarımı E-postama Gönder</button>
+                </form>
+                
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+                
+                <div id="successMessage" style="display:none; margin-top:20px; padding:15px; background:#d4edda; border-radius:10px; text-align:center; color:#155724;">
+                    ✓ Talebiniz alındı! E-postanız listede varsa sonuçlarınız birkaç dakika içinde gönderilecektir.
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Assist. Prof. Dr. Ersin Gündeğer</strong></p>
+            <p>İstanbul Sağlık ve Teknoloji Üniversitesi</p>
+            <p>Eczacılık Fakültesi</p>
+        </footer>
+    </div>
+
+    <script>
+        function showMessage() {
+            // Butona basıldıktan sonra mesajı göster
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'block';
+                // Formu temizle
+                document.querySelector('form').reset();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
